@@ -1,7 +1,5 @@
 package com.project;
 
-import java.util.ArrayList;
-
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -12,6 +10,8 @@ import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
+
+import java.util.ArrayList;
 
 public class UtilsViews {
 
