@@ -38,12 +38,15 @@ public class Controller0 {
         if (!running1 & !paused1) {
             backgroundTask(0);
             running1 = true;
+            buttonTask1.setText("Aturar");
         } else if (paused1){
             running1 = true;
             paused1 = false;
+            buttonTask1.setText("Aturar");
         } else {
             running1 = false;
             paused1 = true;
+            buttonTask1.setText("Iniciar");
         }
     }
     @FXML
@@ -51,12 +54,15 @@ public class Controller0 {
         if (!running2 & !paused2) {
             backgroundTask(1);
             running2 = true;
+            buttonTask2.setText("Aturar");
         } else if (paused2){
             running2 = true;
             paused2 = false;
+            buttonTask2.setText("Aturar");
         } else {
             running2 = false;
             paused2 = true;
+            buttonTask2.setText("Iniciar");
         }
     }
     @FXML
@@ -64,12 +70,15 @@ public class Controller0 {
         if (!running3 & !paused3) {
             backgroundTask(2);
             running3 = true;
+            buttonTask3.setText("Aturar");
         } else if (paused3){
             running3 = true;
             paused3 = false;
+            buttonTask3.setText("Aturar");
         } else {
             running3 = false;
             paused3 = true;
+            buttonTask3.setText("Iniciar");
         }
     }
     private void backgroundTask(int index) {
@@ -87,6 +96,11 @@ public class Controller0 {
                             task1.setText("Tasca 1, " + String.valueOf(currentValue) + "%");
                             task1Bar.setProgress(pgr);
                             System.out.println("Updating label: " + index + ", Value: " + currentValue);
+                            if (pgr >= 1) {
+                                running1 = false;
+                                paused1 = false;
+                                buttonTask1.setText("Iniciar");
+                            }
                         });
                         Thread.sleep(1000);
                     }
@@ -102,6 +116,11 @@ public class Controller0 {
                             task2.setText("Tasca 2, " + String.valueOf(currentValue + random2) + "%");
                             task2Bar.setProgress(pgr);
                             System.out.println("Updating label: " + index + ", Value: " + (currentValue + random2));
+                            if (pgr >= 1) {
+                                running2 = false;
+                                paused2 = false;
+                                buttonTask2.setText("Iniciar");
+                            }
                         });
                         Thread.sleep(random1);
                     }
@@ -117,6 +136,11 @@ public class Controller0 {
                             task3.setText("Tasca 3, " + String.valueOf(currentValue + random2) + "%");
                             task3Bar.setProgress(pgr);
                             System.out.println("Updating label: " + index + ", Value: " + (currentValue + random2));
+                            if (pgr >= 1) {
+                                running3 = false;
+                                paused3 = false;
+                                buttonTask3.setText("Iniciar");
+                            }
                         });
                         Thread.sleep(random1);
                     }
