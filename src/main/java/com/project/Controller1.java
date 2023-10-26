@@ -1,15 +1,14 @@
 package com.project;
 
-import java.awt.*;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.function.Consumer;
+
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 
-
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.ImageView;
@@ -29,10 +28,10 @@ public class Controller1 {
     @FXML
     private Label progressText;
 
-//    @FXML
-//    private void animateToView1(ActionEvent event) {
-//        UtilsViews.setViewAnimating("View0");
-//    }
+    @FXML
+    private void animateToView0(ActionEvent event) {
+        UtilsViews.setViewAnimating("View0");
+    }
 
     @FXML
     private void loadImage() {

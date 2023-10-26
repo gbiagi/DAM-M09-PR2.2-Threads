@@ -7,13 +7,13 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
     public static void main(String[] args) {
-
+        launch(args);
     }
 
     @Override
     public void start(Stage stage) throws Exception {
-        final int windowWidth = 800;
-        final int windowHeight = 600;
+        final int windowWidth = 575;
+        final int windowHeight = 350;
 
         UtilsViews.parentContainer.setStyle("-fx-font: 14 arial;");
         UtilsViews.addView(getClass(), "View0", "/assets/view0.fxml");
@@ -25,6 +25,7 @@ public class Main extends Application {
         stage.setTitle("Threads");
         stage.setMinWidth(windowWidth);
         stage.setMinHeight(windowHeight);
+        stage.setResizable(false);
         stage.show();
         // Add icon only if not Mac
         if (!System.getProperty("os.name").contains("Mac")) {
